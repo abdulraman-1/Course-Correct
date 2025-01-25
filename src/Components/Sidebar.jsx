@@ -9,8 +9,19 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   const { sidebarOpen, toggleSidebar } = useSidebar();
-  const { hamburgerOpen } = useHamburger();
+  const { hamburgerOpen, toggleHamburger } = useHamburger();
 
+  const themeToggle = () => {
+    const body = document.getElementById('body')
+
+    if(body.classList.contains('light')) {
+      body.classList.remove('light')
+      body.classList.add('dark')
+    } else {
+      body.classList.remove('dark')
+      body.classList.add('light')
+    }
+  }
 
   return (
     <aside
@@ -69,6 +80,7 @@ const Sidebar = () => {
               <Link
                 key={index}
                 to={item.link}
+                onClick={() => toggleHamburger()}
                 className="flex items-center gap-3 font-medium rounded-sm p-4 hover:bg-blue-600 dark:hover:bg-blue-500 hover:text-white"
               >
                 <FontAwesomeIcon icon={item.icon} />
@@ -102,7 +114,7 @@ const Sidebar = () => {
           <div className={`flex ${
             sidebarOpen ? 'flex-row' : 'flex-col'
           } gap-4 `}>
-            <button className="flex items-center justify-center">
+            <button className="flex items-center justify-center" onClick={() => {themeToggle(); toggleHamburger()}}>
               <FontAwesomeIcon icon={faCircleHalfStroke} className="text-2xl" />
             </button>
             <button className="flex items-center justify-center">

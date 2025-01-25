@@ -27,15 +27,18 @@ const App = () => {
       <Route index path="/" element={<DepartmentPage />}/>
       <Route path="/" element={<AppRoute />}>
         <Route path="courses" element={<CoursesPage />} />
-        <Route path="courses/:courseId" element={<CoursePage />} />
-        <Route path="lesson" element={<LessonPage />} />
+        <Route path="courses/:courseId" element={<CoursePage />}>
+          <Route path="lesson/:lessonId" element={<LessonPage />} />
+        </Route>
         <Route path="calendar" element={<CalendarPage />}/>
         <Route path="pastquestions" element={<PastQuestionPage />}/>
         <Route path="brainchat" element={<BrainChat />}/>
         <Route path="selectroom" element={<SelectRoomPage />}/>
         <Route path="about" element={<AboutUsPage />}/>
+
         <Route path="tutorialvideo" element={<TutorialVideoPage />}/>
         <Route path="video" element={<VideoPage />} />
+        
         <Route path="setting" element={<SettingsPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />

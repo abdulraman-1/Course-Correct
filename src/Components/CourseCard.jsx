@@ -1,14 +1,14 @@
 // CourseCard.jsx
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const CourseCard = ({ courseicon, coursetitle, coursecode, courseid }) => {
-  const navigate = useNavigate();
+  
 
   return (
-    <div
-      onClick={() => navigate(`/courses/${courseid}`)}
+    <Link
+      to={`/courses/${courseid}`}
       className="group relative bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 cursor-pointer overflow-hidden"
     >
       <div className="p-6">
@@ -45,7 +45,7 @@ const CourseCard = ({ courseicon, coursetitle, coursecode, courseid }) => {
 
       {/* Hover Overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-    </div>
+    </Link>
   );
 };
 

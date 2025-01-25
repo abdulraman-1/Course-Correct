@@ -2,8 +2,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronRight, faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const CourseDescrip = ({ schedulelesson, scheduletitle, scheduledate, status }) => {
+const CourseDescrip = ({ schedulelesson, scheduletitle, scheduledate, lessonid ,status }) => {
   const statusColors = {
     completed: "bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400",
     current: "bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400",
@@ -11,7 +12,10 @@ const CourseDescrip = ({ schedulelesson, scheduletitle, scheduledate, status }) 
   };
 
   return (
-    <div className="group p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors cursor-pointer">
+
+    <div
+      to={`/lesson/${lessonid}`}
+      className="group p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors cursor-pointer">
       <div className="flex items-center justify-between gap-4">
         <div className="flex items-center gap-4">
           <div className={`${statusColors[status]} px-3 py-1 rounded-full text-sm font-medium`}>
@@ -39,6 +43,7 @@ CourseDescrip.propTypes = {
   schedulelesson: PropTypes.string.isRequired,
   scheduletitle: PropTypes.string.isRequired,
   scheduledate: PropTypes.string.isRequired,
+  lessonid: PropTypes.number.isRequired,
   status: PropTypes.oneOf(["completed", "current", "upcoming"]),
 };
 

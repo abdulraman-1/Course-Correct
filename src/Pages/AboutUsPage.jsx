@@ -9,7 +9,7 @@ const AboutUsPage = () => {
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-            Revolutionizing Engineering Education
+            Revolutionizing Education
             <span className="text-blue-600 dark:text-blue-400 block mt-2">The Course Correct Way</span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -44,14 +44,14 @@ const AboutUsPage = () => {
           <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-8 rounded-2xl text-white">
             <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
             <p className="text-lg leading-relaxed opacity-90">
-              To democratize engineering education through accessible, high-quality resources and foster a global community of collaborative learners equipped to tackle real-world challenges.
+              To democratize education through accessible, high-quality resources and foster a global community of collaborative learners equipped to tackle real-world challenges.
             </p>
           </div>
           
           <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-2xl">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Our Vision</h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              We envision becoming the primary catalyst for engineering innovation in Africa by 2030, empowering over 1 million students annually with the tools and community support needed to excel academically and professionally.
+              We envision becoming the primary catalyst for innovation in Africa by 2030, empowering over 1 million students annually with the tools and community support needed to excel academically and professionally.
             </p>
           </div>
         </div>

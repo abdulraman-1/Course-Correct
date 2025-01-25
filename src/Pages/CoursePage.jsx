@@ -78,6 +78,7 @@ const CoursePage = () => {
                   schedulelesson={schedule.lesson}
                   scheduletitle={schedule.title}
                   scheduledate={schedule.date}
+                  lessonid={index}
                   status={schedule.status}
                 />
               ))}

@@ -141,7 +141,7 @@ const Department = () => {
             >
               Level
             </label>
-            <div className="relative w-full mb-4">
+            <div className="relative w-full mb-7">
                 <select
                     className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
                     name="level"
