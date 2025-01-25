@@ -1,8 +1,7 @@
 import PageLayout from "../Layout/PageLayout";
 import Calendar from "../Components/Calendar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarPlus, faCircle } from "@fortawesome/free-solid-svg-icons";
-
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 const CalendarPage = () => {
   // Sample events data
   const events = [
@@ -22,13 +21,6 @@ const CalendarPage = () => {
                 <FontAwesomeIcon icon={faCircle} className="text-blue-600 text-sm" />
                 Harmatan Semester 2024
               </h1>
-            </div>
-            
-            <div className="flex items-center gap-4">
-              <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg flex items-center gap-2">
-                <FontAwesomeIcon icon={faCalendarPlus} />
-                Add Event
-              </button>
             </div>
           </div>
 

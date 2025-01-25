@@ -2,7 +2,7 @@ import PageLayout from "../Layout/PageLayout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane, faComments, faUser, faUsers, faInfoCircle, faSignOutAlt, faPaperclip } from "@fortawesome/free-solid-svg-icons";
 
-const BrainStormPage = () => {
+const BrainChatPage = () => {
   return (
     <PageLayout>
       <section className="h-screen flex flex-col">
@@ -149,4 +149,4 @@ const BrainStormPage = () => {
   );
 };
 
-export default BrainStormPage;
+export default BrainChatPage;

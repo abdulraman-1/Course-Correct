@@ -28,7 +28,7 @@ const Sidebar = () => {
             <img
               src={coursecorrect}
               alt="Course Correct Logo"
-              className="w-10 h-auto"
+              className="w-10 h-auto drop-shadow-lg"
             />
           )}
 
@@ -63,7 +63,7 @@ const Sidebar = () => {
               { icon: faBlog, label: 'Blog', link: "" },
               { icon: faVideo, label: 'Tutorial Videos', link: "tutorialvideo" },
               { icon: faBook, label: 'PastQuestions', link: "/pastquestions" },
-              { icon: faComment, label: 'BrainStorm', link: "/brainstorm" },
+              { icon: faComment, label: 'BrainChat', link: "/brainchat" },
               { icon: faAddressCard, label: 'About Us', link: "/about" },
             ].map((item, index) => (
               <Link

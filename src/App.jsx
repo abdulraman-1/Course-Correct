@@ -9,13 +9,15 @@ import DepartmentPage from "./Pages/DepartmentPage"
 import CoursesPage from "./Pages/CoursesPage"
 import CalendarPage from "./Pages/CalendarPage"
 import PastQuestionPage from "./Pages/PastQuestionPage"
-import BrainStormPage from "./Pages/BrainStormPage"
+import BrainChat from "./Pages/BrainChatPage"
 import CoursePage from "./Pages/CoursePage"
 import AboutUsPage from "./Pages/AboutUsPage"
 import TutorialVideoPage from "./Pages/TutorialVideoPage"
 import NotFoundPage from "./Pages/NotFoundPage"
 
+import SelectRoomPage from "./Pages/SelectRoomPage"
 import SettingsPage from "./Pages/SettingsPage"
+
 
 const App = () => {
   return (
@@ -29,7 +31,8 @@ const App = () => {
         <Route path="lesson" element={<LessonPage />} />
         <Route path="calendar" element={<CalendarPage />}/>
         <Route path="pastquestions" element={<PastQuestionPage />}/>
-        <Route path="brainstorm" element={<BrainStormPage />}/>
+        <Route path="brainchat" element={<BrainChat />}/>
+        <Route path="selectroom" element={<SelectRoomPage />}/>
         <Route path="about" element={<AboutUsPage />}/>
         <Route path="tutorialvideo" element={<TutorialVideoPage />}/>
         <Route path="video" element={<VideoPage />} />

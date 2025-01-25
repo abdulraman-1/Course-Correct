@@ -10,7 +10,7 @@ const Header = () => {
     >
         <div className='flex items-center'>
             <HamburgerMenu />
-            <img src={coursecorrect} alt="Course Correct Logo" className="w-10 h-auto mx-auto" />
+            <img src={coursecorrect} alt="Course Correct Logo" className="w-10 h-auto mx-auto drop-shadow-lg" />
         </div>
     </header>
   )
