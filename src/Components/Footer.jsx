@@ -4,7 +4,7 @@ import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/fre
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 -mb-4 -mx-4 text-white pt-12">
+    <footer className="dark:bg-gray-900 bg-gray-200 text-black -mb-4 -mx-4 dark:text-white pt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Brand Info */}
