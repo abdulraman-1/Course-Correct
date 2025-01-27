@@ -15,11 +15,11 @@ const PageLayout = ({ children }) => {
       className={`w-full min-h-screen overflow-auto absolute right-0  transition-all p-4 lg:mt-0 mt-16
       dark:text-gray-100 dark:bg-gray-600 bg-gray-100 text-gray-800 
         ${sidebarOpen
-          ? "lg:w-[calc(100%-289px)] lg:ml-[289px]"
-          : "lg:w-[calc(100%-65px)] lg:ml-[65px]"
+          ? "lg:w-[calc(100%-256px)] lg:ml-[256px]"
+          : "lg:w-[calc(100%-64px)] lg:ml-[64px]"
         }`}
     >
-      <h1 className="text-3xl pb-4 font-semibold">{title}</h1>
+      <h1 className="text-3xl lg:text-4xl pb-3 font-bold text-blue-500">{title}</h1>
       {children}
     </main>
   );

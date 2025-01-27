@@ -14,12 +14,6 @@ const LessonPage = () => {
                 <FontAwesomeIcon icon={faArrowLeft} />
                 <span className="hidden sm:inline">Back to Course</span>
               </button>
-              <div className="text-sm text-gray-600 dark:text-gray-400">
-                <span>Progress: 25%</span>
-                <div className="w-32 h-1 bg-gray-200 dark:bg-gray-700 rounded-full mt-1">
-                  <div className="w-1/4 h-full bg-blue-600 rounded-full"></div>
-                </div>
-              </div>
             </div>
 
             <div className="space-y-2">

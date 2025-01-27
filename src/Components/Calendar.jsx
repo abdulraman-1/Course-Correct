@@ -8,9 +8,9 @@ import {
 import { createEventsServicePlugin } from '@schedule-x/events-service'
 import { useEffect, useState } from 'react'
 
-import '../calendar.css'
- 
+
 import '@schedule-x/theme-default/dist/index.css'
+import '../calendar.css'
  
 function CalendarApp() {
   const eventsService = useState(() => createEventsServicePlugin())[0]

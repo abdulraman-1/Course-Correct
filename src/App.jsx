@@ -28,8 +28,8 @@ const App = () => {
       <Route path="/" element={<AppRoute />}>
         <Route path="courses" element={<CoursesPage />} />
         <Route path="courses/:courseId" element={<CoursePage />}>
-          <Route path="lesson/:lessonId" element={<LessonPage />} />
         </Route>
+          <Route path="lesson" element={<LessonPage />} />
         <Route path="calendar" element={<CalendarPage />}/>
         <Route path="pastquestions" element={<PastQuestionPage />}/>
         <Route path="brainchat" element={<BrainChat />}/>
@@ -38,7 +38,7 @@ const App = () => {
 
         <Route path="tutorialvideo" element={<TutorialVideoPage />}/>
         <Route path="video" element={<VideoPage />} />
-        
+
         <Route path="setting" element={<SettingsPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
