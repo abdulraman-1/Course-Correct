@@ -28,7 +28,7 @@ const CourseDescrip = ({
       to={`/course/${courseId}/lesson/${lessonid}`}
       className="group p-6 hover:bg-gray-50 dark:hover:bg-gray-700/30 transition-colors cursor-pointer"
     >
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex items-center justify-between px-4">
         <div className="flex items-center gap-4">
           <div
             className={`${statusColors[status]} px-3 py-1 rounded-full text-sm font-medium`}

@@ -41,7 +41,7 @@ const App = () => {
         <Route path="tutorialvideo" element={<TutorialVideoPage />} />
         <Route path="tutorialvideo/:id" element={<VideoPage />} />
 
-        <Route path="setting" element={<SettingsPage />} />
+        <Route path="profile/setting" element={<SettingsPage />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
