@@ -1,6 +1,13 @@
 import PageLayout from "../Layout/PageLayout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay, faClock, faArrowRight, faSearch, faFilter } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPlay,
+  faClock,
+  faArrowRight,
+  faSearch,
+  faFilter,
+} from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const TutorialVideoPage = () => {
   return (
@@ -21,9 +28,9 @@ const TutorialVideoPage = () => {
             {/* Search and Filter */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <div className="relative flex-1">
-                <FontAwesomeIcon 
-                  icon={faSearch} 
-                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" 
+                <FontAwesomeIcon
+                  icon={faSearch}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
                 />
                 <input
                   type="text"
@@ -41,33 +48,34 @@ const TutorialVideoPage = () => {
           {/* Video Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {[
-              { 
-                title: "ECE 301: Engineering Maths 4", 
+              {
+                title: "ECE 301: Engineering Maths 4",
                 duration: "12:45",
                 category: "Mathematics",
-                thumbnail: "src/images/video1.jpg"
+                thumbnail: "src/images/video1.jpg",
               },
-              { 
-                title: "ECE 301: Engineering Maths 4", 
+              {
+                title: "ECE 301: Engineering Maths 4",
                 duration: "12:45",
                 category: "Mathematics",
-                thumbnail: "src/images/video1.jpg"
+                thumbnail: "src/images/video1.jpg",
               },
-              { 
-                title: "ECE 301: Engineering Maths 4", 
+              {
+                title: "ECE 301: Engineering Maths 4",
                 duration: "12:45",
                 category: "Mathematics",
-                thumbnail: "src/images/video1.jpg"
+                thumbnail: "src/images/video1.jpg",
               },
-              { 
-                title: "ECE 301: Engineering Maths 4", 
+              {
+                title: "ECE 301: Engineering Maths 4",
                 duration: "12:45",
                 category: "Mathematics",
-                thumbnail: "src/images/video1.jpg"
+                thumbnail: "src/images/video1.jpg",
               },
               // Add other video objects
             ].map((video, index) => (
-              <div
+              <Link
+                to={`/tutorialvideo/${index + 1}`}
                 key={index}
                 className="group relative bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer"
               >
@@ -79,9 +87,9 @@ const TutorialVideoPage = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <FontAwesomeIcon 
-                      icon={faPlay} 
-                      className="text-white text-4xl" 
+                    <FontAwesomeIcon
+                      icon={faPlay}
+                      className="text-white text-4xl"
                     />
                   </div>
                   <div className="absolute bottom-2 right-2 bg-gray-900/80 text-white text-sm px-2 py-1 rounded-md flex items-center gap-1">
@@ -100,22 +108,20 @@ const TutorialVideoPage = () => {
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
                     {video.title}
                   </h3>
-              
-                  
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
           {/* CTA Section */}
           <div className="flex justify-center">
-          <a
-            href="/explore"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-medium"
-          >
-            Explore All Videos
-            <FontAwesomeIcon icon={faArrowRight} />
-          </a>
+            <a
+              href="/explore"
+              className="inline-flex items-center gap-2 px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-medium"
+            >
+              Explore All Videos
+              <FontAwesomeIcon icon={faArrowRight} />
+            </a>
           </div>
         </div>
       </section>

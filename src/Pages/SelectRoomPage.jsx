@@ -1,13 +1,41 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PageLayout from "../Layout/PageLayout";
-import { faSearch, faUsers, faRocket, faClock  } from '@fortawesome/free-solid-svg-icons';
+import {
+  faSearch,
+  faUsers,
+  faRocket,
+  faClock,
+} from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const SelectRoomPage = () => {
+  const navigate = useNavigate();
+
   const courses = [
-    { code: "ECE301", title: "Electrical Engineering", participants: 12, active: "2h ago" },
-    { code: "MEE401", title: "Advanced Thermodynamics", participants: 8, active: "30m ago" },
-    { code: "CSE201", title: "Data Structures", participants: 15, active: "1h ago" },
-    { code: "PHY101", title: "Classical Mechanics", participants: 20, active: "4h ago" },
+    {
+      code: "ECE301",
+      title: "Electrical Engineering",
+      participants: 12,
+      active: "2h ago",
+    },
+    {
+      code: "MEE401",
+      title: "Advanced Thermodynamics",
+      participants: 8,
+      active: "30m ago",
+    },
+    {
+      code: "CSE201",
+      title: "Data Structures",
+      participants: 15,
+      active: "1h ago",
+    },
+    {
+      code: "PHY101",
+      title: "Classical Mechanics",
+      participants: 20,
+      active: "4h ago",
+    },
   ];
 
   return (
@@ -17,7 +45,10 @@ const SelectRoomPage = () => {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-3">
             Collaborative Learning Spaces
-            <FontAwesomeIcon icon={faRocket} className="inline-block ml-3 text-blue-600" />
+            <FontAwesomeIcon
+              icon={faRocket}
+              className="inline-block ml-3 text-blue-600"
+            />
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300">
             Join active study groups or start your own knowledge journey
@@ -27,7 +58,10 @@ const SelectRoomPage = () => {
         {/* Search and Filter */}
         <div className="mb-8 flex flex-col sm:flex-row gap-4">
           <div className="relative flex-1">
-            <FontAwesomeIcon icon={faSearch} className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" />
+            <FontAwesomeIcon
+              icon={faSearch}
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+            />
             <input
               type="text"
               placeholder="Search courses..."
@@ -53,20 +87,25 @@ const SelectRoomPage = () => {
                   <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                     {course.code}
                   </h3>
-                  <p className="text-lg text-gray-800 dark:text-white">{course.title}</p>
+                  <p className="text-lg text-gray-800 dark:text-white">
+                    {course.title}
+                  </p>
                 </div>
                 <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400">
                   <FontAwesomeIcon icon={faUsers} />
                   <span>{course.participants}</span>
                 </div>
               </div>
-              
+
               <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <FontAwesomeIcon icon={faClock} />
                   <span>Active {course.active}</span>
                 </div>
-                <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors">
+                <button
+                  onClick={() => navigate(`/brainchat/${index + 1}`)}
+                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+                >
                   Join Room
                 </button>
               </div>
